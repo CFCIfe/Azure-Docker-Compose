@@ -7,6 +7,7 @@ set -euo pipefail
 #  "$XYZ_DB_PASSWORD" from a file, especially for Docker's secrets feature)
 
 #Start sshd
+sed -i "s/SSH_PORT/$SSH_PORT/g" /etc/ssh/sshd_config
 /usr/sbin/sshd
 
 file_env() {
