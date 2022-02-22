@@ -80,6 +80,9 @@ COPY ssh_setup.sh /tmp
 RUN chmod +x /tmp/ssh_setup.sh \
     && (sleep 1;/tmp/ssh_setup.sh 2>&1 > /dev/null)
 
+ENV PORT 8080
+ENV SSH_PORT 2222
+
 # Open port 2222 for SSH access
 EXPOSE 80 2222
 
