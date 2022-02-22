@@ -81,7 +81,7 @@ RUN chmod +x /tmp/ssh_setup.sh \
     && (sleep 1;/tmp/ssh_setup.sh 2>&1 > /dev/null)
 
 # Open port 2222 for SSH access
-EXPOSE 80 2222
+EXPOSE 2222 80
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
